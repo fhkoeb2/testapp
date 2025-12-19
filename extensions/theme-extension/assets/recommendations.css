@@ -1,0 +1,25 @@
+.connector-recommendations {
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.connector-recommendations h2 {
+  margin-bottom: 15px;
+}
+
+.connector-recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.connector-rec-item {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+.connector-rec-item img {
+  max-width: 100%;
+  height: auto;
+}

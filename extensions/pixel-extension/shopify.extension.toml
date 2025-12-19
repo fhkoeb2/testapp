@@ -1,0 +1,7 @@
+name = "Analytics Pixel"
+type = "web_pixel_extension"
+runtime_context = "strict"
+
+[build]
+command = "npm run build"
+watch = "npm run develop"

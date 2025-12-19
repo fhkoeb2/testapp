@@ -1,0 +1,24 @@
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You may also like"
+    }
+  ],
+  "javascript": "recommendations.js",
+  "stylesheet": "recommendations.css"
+}
+{% endschema %}
+
+<div class="connector-recommendations" data-product-id="{{ product.id }}">
+  <h2>{{ block.settings.heading }}</h2>
+  <div class="connector-recommendations-grid" id="connector-recommendations-container">
+    <!-- Recommendations will be injected here -->
+    <p>Loading recommendations...</p>
+  </div>
+</div>

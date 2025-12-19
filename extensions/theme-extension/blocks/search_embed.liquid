@@ -1,0 +1,27 @@
+{% schema %}
+{
+  "name": "Global Search Bar",
+  "target": "body",
+  "stylesheet": "search.css",
+  "javascript": "search.js",
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "enable_search",
+        "label": "Enable Floating Search",
+        "default": true
+    }
+  ]
+}
+{% endschema %}
+
+{% if block.settings.enable_search %}
+<div id="connector-search-overlay" style="display: none;">
+  <div class="connector-search-modal">
+    <input type="text" id="connector-search-input" placeholder="Search products...">
+    <div id="connector-search-results"></div>
+    <button id="connector-close-search">Close</button>
+  </div>
+</div>
+<button id="connector-search-trigger">Search</button>
+{% endif %}
