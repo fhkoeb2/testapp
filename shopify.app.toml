@@ -13,33 +13,33 @@ include_config_on_deploy = true
 api_version = "2026-01"
 
   [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
-
-  [[webhooks.subscriptions]]
   topics = [ "app/scopes_update" ]
   uri = "/webhooks/app/scopes_update"
 
   [[webhooks.subscriptions]]
-  topics = [ "products/create", "products/update", "products/delete" ]
-  uri = "/webhooks/products/eviction"
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "bulk_operations/finish" ]
+  uri = "/webhooks/bulk_operation/finish"
 
   [[webhooks.subscriptions]]
   topics = [ "inventory_levels/update" ]
   uri = "/webhooks/inventory/update"
 
   [[webhooks.subscriptions]]
-  topics = [ "bulk_operations/finish" ]
-  uri = "/webhooks/bulk_operation/finish"
+  topics = [ "products/create", "products/delete", "products/update" ]
+  uri = "/webhooks/products/eviction"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [ "https://example.com/api/auth" ]
 
 [app_proxy]
 url = "https://example.com/app/proxy"
 subpath = "connector"
 prefix = "apps"
-
-[access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_inventory"
-
-[auth]
-redirect_urls = [ "https://example.com/api/auth" ]

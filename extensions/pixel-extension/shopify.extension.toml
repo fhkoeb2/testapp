@@ -1,4 +1,5 @@
 name = "Analytics Pixel"
+uid = "d7505392-32f8-3dd4-e205-8ec9f8d4b2877f3eb2ab"
 type = "web_pixel_extension"
 runtime_context = "strict"
 

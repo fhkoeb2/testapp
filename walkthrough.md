@@ -48,6 +48,10 @@ This document provides a detailed breakdown of every file created or modified, e
 - **Why**: Global accessibility. A search bar usually floats or lives in the header, not just on a product page.
 - **What**: An "App Embed" (floating widget). It renders a search button/icon that toggles an overlay.
 
+### [extensions/theme-extension/locales/en.default.json](file:///Users/fhkoeb977/Projects/ShoApp/testapp/extensions/theme-extension/locales/en.default.json)
+- **Why**: Requirement. Shopify Theme Extensions require a default locale file.
+- **What**: A JSON file defining default strings for settings (e.g. "Heading").
+
 ### [extensions/theme-extension/assets/search.js](file:///Users/fhkoeb977/Projects/ShoApp/testapp/extensions/theme-extension/assets/search.js)
 - **Why**: Interactive Search.
 - **What**: Implements the debounce logic and fetches results from the App Proxy (`/apps/connector/search`) as the user types.
